@@ -11,4 +11,4 @@
 ## 示例
 
 ## 文档
-[点击查看我们的语雀文档](https://www.yuque.com/docs/share/f8838e1a-c802-459b-a53a-56be0f159c66?#)
+[点击查看我们的语雀文档](https://www.yuque.com/docs/share/f8838e1a-c802-459b-a53a-56be0f159c66?#)，获取详细的信息。

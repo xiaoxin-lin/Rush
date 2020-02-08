@@ -1,0 +1,43 @@
+#!/usr/bin/env node
+
+const inquirer = require('inquirer')
+const chalk = require('chalk')
+const shell = require('shelljs')
+
+const askQuestions = () => {
+  const questions = [
+    {
+      name: 'name',
+      type: 'input',
+      message: '项目名称'
+    },
+     {
+      name: 'description',
+      type: 'input',
+      message: '项目介绍'
+    },{
+      name: 'useTs',
+      type: 'confirm',
+      message: '使用TypeScript?',
+    },
+    {
+      type: 'list',
+      name: 'css',
+      message: 'CSS预处理器',
+      choices: ['stylus', 'less', 'sass', 'none']
+    }
+  ];
+  return inquirer.prompt(questions);
+};
+
+const run = async () => {
+  console.log(
+    chalk.green('正在为你初始化')
+  )
+  const answers = await askQuestions()
+  console.log(answers)
+  console.log(
+    chalk.white.bgGreen.bold(`${asnswers.name}创建成功`)
+  )
+};
+run();
