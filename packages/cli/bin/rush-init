@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+const Project = require('../src/create/project')
 const inquirer = require('inquirer')
 const chalk = require('chalk')
 const shell = require('shelljs')
@@ -34,10 +35,13 @@ const run = async () => {
   console.log(
     chalk.green('正在为你初始化')
   )
-  const answers = await askQuestions()
-  console.log(answers)
+  const options = await askQuestions()
+  const project = new Project()
+  project.create()
+  // await initProject(options)
   console.log(
-    chalk.white.bgGreen.bold(`${asnswers.name}创建成功`)
+    chalk.white.bgGreen.bold(`${options.name}创建成功`)
   )
 };
+
 run();
